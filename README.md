@@ -192,25 +192,12 @@ uv run python app.py
 ```
 
 ## 隐私与安全
-
-- 程序不保存任何账号、密码、Token 或日志到磁盘
+- 程序不向任何非南邮官方服务器上传任何账号、密码、Token 或日志
+- 程序会保存Token到运行目录下，请及时清理。
 - 密码使用 `getpass` 隐藏输入，不会回显
 - 证书文件保存为 `certificate_学号.png`，包含个人信息，请妥善保管
 
-## 开发与测试
 
-```powershell
-# 安装开发依赖
-uv sync --group dev --group build
-
-# 质量检查
-uv run python -m compileall -q main.py labpass
-uv run pytest
-uv run ruff check .
-uv run ruff format --check .
-```
-
-测试使用模拟 HTTP Session，不会登录真实账号或向学校接口提交数据。
 
 ## 已知限制
 
