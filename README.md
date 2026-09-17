@@ -1,0 +1,2 @@
+# NJUPT_LabSafetyPlatformAutoPass
+可以在校园网内通过用户+密码的方式登录并快速完成实验室安全教育的程序
